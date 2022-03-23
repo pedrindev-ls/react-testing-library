@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event';
 import React from 'react';
 import App from '../App';
 import renderWithRouter from './renderWithRouter';
@@ -18,7 +17,7 @@ describe('Testa se Ao digitar um url errado', () => {
     const { history } = renderWithRouter(<App />);
     history.push('/aleatorio');
     const image = screen
-      .getByAltText('Pikachu crying because the page requested was not found')
+      .getByAltText('Pikachu crying because the page requested was not found');
     expect(image).toHaveAttribute('src', 'https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif');
   });
 });
