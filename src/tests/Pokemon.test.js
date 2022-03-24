@@ -3,10 +3,10 @@ import React from 'react';
 import App from '../App';
 import renderWithRouter from './renderWithRouter';
 
-const { screen, getByRole, getByLabelText } = require('@testing-library/react');
+const { screen } = require('@testing-library/react');
 
 describe('Teste se o Component Pokemon', () => {
-  const URL = '/pokemons/25'
+  const URL = '/pokemons/25';
   test('Aparece um box com as informações detalhadas', () => {
     const { history } = renderWithRouter(<App />);
     history.push(URL);
