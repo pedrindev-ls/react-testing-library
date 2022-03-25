@@ -30,6 +30,7 @@ describe('Teste se o Component Pokemon', () => {
     const { history } = renderWithRouter(<App />);
     const infoLink = screen.getByRole('link', { name: 'More details' });
     userEvent.click(infoLink);
+
     expect(history.location.pathname).toBe(URL);
   });
 
